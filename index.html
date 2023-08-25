@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido pra ias</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #9EBC9E;
+        }
+        .btn{
+            background-color: #FFCFD2;
+            font: 300 40px 'Poppins', sans-serif;
+            padding: 15px 30px;
+            border-radius: 15px;
+            transition: ease-in-out 0.4s;
+            cursor: pointer;
+            width: 200px;
+        }
+        .tituloPrincipal{
+            font: 700 48px 'Poppins', sans-serif;
+        }
+        .titulo{
+            margin-top: 30px;
+            text-align: center;
+            padding-bottom: 100px;
+        }
+        .botoes{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 255px;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 400px) {
+            .botoes{
+                margin: 0;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function sim(){
+            location.href = 'https://open.spotify.com/intl-pt/track/0oZrvoCYEbKGCsU7cQqNnw'
+        }
+        function desvia(btn){
+            btn.style.position = 'absolute'
+            btn.style.bottom = posicao(10, 80)
+            btn.style.left = posicao(10, 80)
+        }
+        function posicao(min, max){
+            return(Math.random()*(max - min + min)) + '%'
+        }
+    </script>
+    <div class="titulo">
+        <h1 class="tituloPrincipal">mary me</h1>
+    </div>
+    <div class="botoes">
+        <div class="botaoS">
+            <button class="btn" onclick="sim()">yes sim</button>
+        </div>
+        <div class="botaoM">
+            <button class="btn" onmouseover="desvia(this)" onclick="desvia(this)">nao</button>
+        </div>
+    </div>
+</body>
+</html>
